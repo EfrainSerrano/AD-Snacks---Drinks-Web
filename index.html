@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD Snacks & Drinks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <img src="/images/menunegocio.jpg" alt="Imagen del negocio">
+
+        <!-- CONTENEDOR DEL LOGO (CENTRADO ENTRE EL TOP Y EL MENÚ) -->
+        <div class="logo-container">
+            <div class="hero-logo">
+                
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="380px" height="380px"
+                    viewBox="0 0 1024.000000 1024.000000" preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="#ffffff"
+                        stroke="none">
+                        <path d="M703 9591 c-23 -11 -50 -32 -60 -47 -17 -27 -18 -176 -18 -4199 0
+               -4079 0 -4171 19 -4198 37 -55 50 -57 354 -57 l280 0 105 243 c58 133 196 449
+               307 702 111 253 260 593 330 755 70 162 166 383 213 490 47 107 127 290 177
+               405 233 531 347 790 460 1045 149 336 449 1016 462 1049 9 24 10 22 34 -30 40
+               -84 285 -630 342 -759 28 -63 118 -266 201 -450 l151 -335 167 -1 c93 0 171 1
+               175 3 3 2 -2 20 -12 41 -10 20 -66 144 -124 275 -113 254 -225 503 -487 1082
+               -89 198 -199 443 -244 545 -163 369 -188 421 -196 413 -5 -5 -186 -411 -402
+               -903 -217 -492 -438 -994 -492 -1115 -53 -121 -151 -344 -217 -495 -66 -151
+               -135 -309 -153 -350 -107 -241 -417 -948 -498 -1135 -52 -121 -154 -355 -227
+               -520 -73 -165 -166 -376 -206 -470 l-74 -170 -70 -3 -70 -3 0 3951 0 3950
+               4195 0 4195 0 0 -3950 0 -3950 -907 0 -907 0 112 67 c62 38 161 104 220 148
+               120 89 353 316 456 445 265 332 449 753 529 1210 29 171 32 613 4 790 -73 469
+               -274 929 -563 1290 -104 129 -276 296 -404 391 -356 266 -685 400 -1187 485
+               -81 14 -196 18 -665 21 l-568 4 0 -2580 0 -2581 160 0 160 0 0 2425 0 2425
+               138 -1 c671 -3 917 -32 1219 -145 183 -68 417 -197 567 -312 201 -154 416
+               -408 549 -649 204 -370 297 -728 297 -1141 0 -484 -116 -894 -358 -1267 -336
+               -517 -867 -860 -1517 -980 -103 -19 -311 -45 -357 -45 -4 0 -8 -70 -8 -155 l0
+               -155 1608 2 c1587 3 1607 3 1641 23 19 11 43 33 55 48 l21 28 0 4157 c0 4139
+               0 4157 -20 4191 -11 18 -36 42 -55 52 -34 18 -161 19 -4415 19 -4277 0 -4381
+               -1 -4422 -19z" />
+                        <path d="M3824 3801 c-816 -5 -1014 -9 -1027 -19 -27 -22 -30 -67 -9 -114 23
+               -52 262 -353 912 -1148 47 -58 93 -116 103 -130 15 -22 17 -70 17 -536 l0
+               -512 -208 -4 c-229 -3 -246 -7 -278 -69 -20 -40 -10 -104 21 -135 43 -43 77
+               -45 608 -42 485 3 503 4 537 23 49 29 69 87 49 141 -8 22 -29 48 -48 61 -33
+               22 -42 23 -242 23 l-209 0 0 509 0 510 82 103 c45 57 226 281 403 498 452 556
+               519 640 549 684 35 52 35 104 0 137 -31 29 90 27 -1260 20z m910 -219 c2 -4
+               -25 -43 -61 -87 -36 -44 -181 -222 -321 -395 -141 -173 -290 -355 -331 -404
+               l-76 -88 -45 49 c-41 45 -247 295 -613 747 l-139 171 54 6 c81 9 1526 10 1532
+               1z" />
+                    </g>
+                </svg></div>
+        </div>
+
+        <!-- Menú en la parte inferior del hero -->
+        <div class="nav-in-hero">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#conocenos">Conócenos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Menú fixed (oculto al inicio) -->
+    <div class="nav-fixed" id="fixedNav">
+        <ul class="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#conocenos">Conócenos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- SECCIONES -->
+    <section id="inicio">
+        <h2>Bienvenidos</h2>
+        <p>"Bienvenido a AD Snacks & Drinks, el lugar perfecto para recargar energías con nuestros deliciosos snacks y
+            bebidas refrescantes. ¡Disfruta cada momento con nosotros!"</p>
+    </section>
+
+    <section id="menu">
+        <h2>Nuestro Menú</h2>
+        <p>Descubre nuestra variedad de snacks saludables y bebidas refrescantes, preparados con ingredientes de la más
+            alta calidad para tu disfrute.</p>
+    </section>
+
+    <section id="conocenos">
+        <h2>Conócenos</h2>
+        <p>Somos un negocio familiar comprometido con ofrecer productos de calidad y un servicio excepcional desde 2010.
+        </p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Visítanos en nuestra ubicación o contáctanos para más información sobre nuestros productos y servicios.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AD Snacks & Drinks</h3>
+                <p>Tu destino para snacks saludables y bebidas refrescantes.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Calle Principal #123, Ciudad</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 234 567 890</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <span>contacto@aydsnacks.com</span>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 AD Snacks & Drinks. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/scripts/javascript.js"></script>
+</body>
+
+</html>
