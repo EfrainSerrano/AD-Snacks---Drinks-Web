@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /* ------------ ESTILOS GENERALES ------------ */
 * {
     margin: 0;
@@ -54,12 +56,14 @@ body {
 .hero-logo {
     font-size: 3.5rem;
     font-weight: bold;
+    font-family: 'Playfair Display', sans-serif;
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
+    font-family: 'Playfair Display', sans-serif;
     margin-bottom: 30px;
 }
 
@@ -71,6 +75,7 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.1rem;
     transition: all 0.3s;
 }
@@ -88,8 +93,13 @@ nav {
     width: 100%;
     background: transparent;
     z-index: 1000;
-    transition: all 0.3s;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
     padding: 15px 0;
+}
+
+nav.scrolled {
+    background: rgba(51, 51, 51, 0.95); /* Fondo sólido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efecto */
 }
 
 .menu-container {
@@ -111,8 +121,8 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-family: 'Playfair Display', sans-serif;
+    transition: color 0.3s ease;
     padding: 5px 50px;
 }
 
@@ -143,6 +153,39 @@ nav {
     font-size: 1.3rem;
 }
 
+.logo-container svg {
+    min-width: 53.3px;
+}
+
+.logo-container p {
+    min-width: 158.359px;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+/*Cambios en el menu al hacer scroll*/
+
+nav.menu-changed .logo-container svg{
+    width: 30px;
+    height: 30px;
+}
+
+nav.menu-changed .logo-container a{
+    display: flex;
+    color: white;
+    font-family: 'Playfair Display', sans-serif;
+    align-items: center;
+    font-size: 1.0rem;
+}
+
+nav.menu-changed .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    padding: 5px 50px;
+}
+
+
 /* ------------ SECCIÓN BIENVENIDOS ------------ */
 #inicio {
     padding: 100px 20px;
@@ -166,6 +209,7 @@ nav {
 
 .welcome-text {
     font-size: 1.1rem;
+    font-family: 'Open Sans', sans-serif;
     color: #555;
     margin-bottom: 30px;
 }
@@ -197,8 +241,13 @@ nav {
     margin-bottom: 15px;
 }
 
+.feature p {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .feature h3 {
     font-size: 1.3rem;
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: 10px;
     color: #333;
 }

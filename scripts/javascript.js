@@ -16,11 +16,16 @@
    });
 
    // Cambiar navbar al hacer scroll
-   window.addEventListener('scroll', () => {
-       const nav = document.querySelector('nav');
-       if (window.scrollY > 100) {
-           nav.style.background = 'rgba(26, 26, 26, 0.95)';
+   window.addEventListener('scroll', function() {
+       const navbar = document.getElementById('navbar');
+       const hero = document.querySelector('.hero');
+       const heroHeight = hero.offsetHeight - 50;
+
+       if (window.scrollY > heroHeight) {
+           navbar.classList.add('scrolled');
+           navbar.classList.add('menu-changed'); 
        } else {
-           nav.style.background = 'transparent';
+           navbar.classList.remove('scrolled');
+           navbar.classList.remove('menu-changed');
        }
    });
