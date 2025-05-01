@@ -102,6 +102,28 @@ nav.scrolled {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efecto */
 }
 
+/*Efecto sobre el menu al pasar el puntero*/
+
+.nav-item {
+    color: white;
+    margin: 0 1.5rem;
+    position: relative;
+    text-decoration: none;
+  }
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ebce5a, #f1c40f);
+    transition: width 0.4s ease, opacity 0.3s ease;
+  }
+  .nav-item:hover::after {
+    width: 100%;
+  }
+
 .menu-container {
     max-width: 1200px;
     margin: 0 auto;
