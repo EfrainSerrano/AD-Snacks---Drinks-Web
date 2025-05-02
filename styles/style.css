@@ -411,7 +411,6 @@ footer {
     }
     .hero-bg {
         background-attachment: scroll !important; /* Fondo se mueve con el scroll */
-        filter: none; /* Opcional: mejora rendimiento */
     }
     .hero-subtitle {
         font-size: 1.2rem;
