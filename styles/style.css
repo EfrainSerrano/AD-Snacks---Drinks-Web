@@ -406,6 +406,13 @@ footer {
         font-size: 2.5rem;
     }
 
+    .hero {
+        height: 100svh; /* Altura estable */
+    }
+    .hero-bg {
+        background-attachment: scroll !important; /* Fondo se mueve con el scroll */
+        filter: none; /* Opcional: mejora rendimiento */
+    }
     .hero-subtitle {
         font-size: 1.2rem;
     }
