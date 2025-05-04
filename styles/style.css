@@ -624,26 +624,22 @@ footer {
         display: block;
     }
 
+        /*Carrusel de tarjetas features*/
+
+        
+        /*Galeria flexbox*/
     .gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap;
         height: auto;
         gap: 8px;
-        padding: 10px;
     }
     
     .gallery img {
-        width: 100% !important;
-        height: 180px;
+        width: calc(50% - 4px) !important;
+        height: 150px;
         flex-grow: 0;
         opacity: 1;
         transition: transform 0.3s;
-    }
-    
-    .gallery img:hover {
-        width: 100% !important;
-        transform: scale(1.03);
-        filter: none;
     }
 }   
 
