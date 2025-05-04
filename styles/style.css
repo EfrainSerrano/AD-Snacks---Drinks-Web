@@ -664,7 +664,7 @@ footer {
     }
     
     .imagen-menu {
-        height: 60vh; /* Altura adaptable */
+        height: 80%; /* Altura adaptable */
         min-height: 400px; /* Mínimo para contenido */
         filter: brightness(80%); /* Más visible en móvil */
     }
