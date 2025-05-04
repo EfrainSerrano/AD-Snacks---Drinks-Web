@@ -624,14 +624,16 @@ footer {
         display: block;
     }
 
-        /*Carrusel de tarjetas features*/
-
+    .features {
+        display: none;
+    }
         
         /*Galeria flexbox*/
     .gallery {
         flex-wrap: wrap;
         height: auto;
         gap: 8px;
+        margin-bottom: 50px;
     }
     
     .gallery img {
