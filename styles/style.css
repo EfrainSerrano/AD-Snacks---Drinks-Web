@@ -467,6 +467,17 @@ nav.menu-changed .menu a {
 .mapa-container {
     flex: 1;
     min-width: 300px;
+    width: 100%;
+    margin: 0;
+    text-align: center; 
+}
+
+.mapa-container iframe {
+    width: 100% !important;
+    height: 400px !important;
+    border: none !important;
+    display: block;
+    margin: 0 auto; /* Centrado horizontal */
 }
 
 /* ------------ OTRAS SECCIONES ------------ */
@@ -591,5 +602,18 @@ footer {
 
     .gallery img {
         width: 100% !important;
+    }
+
+    .mapa-container iframe {
+        height: 400px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mapa-container iframe {
+        width: 600px !important;
+        height: 450px !important;
+        border: 0 !important;
+        /* Aquí conserva exactamente tu estilo original */
     }
 }
