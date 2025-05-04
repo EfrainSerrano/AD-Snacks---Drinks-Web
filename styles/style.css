@@ -223,7 +223,6 @@ nav.menu-changed .menu a {
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
-    overflow: hidden;
 }
 
 .welcome-container {
@@ -326,7 +325,6 @@ nav.menu-changed .menu a {
     padding: 0;
     max-width: 100vw;
     margin: 0;
-    scroll-margin-top: 100px;
     overflow-x: hidden;
 }
 
@@ -342,6 +340,8 @@ nav.menu-changed .menu a {
     display: grid;
     grid-template-areas: "overlay";
     filter: brightness(50%);
+    margin: 0;
+    padding: 0;
 }
 
 .imagen-menu:hover {
@@ -595,25 +595,76 @@ footer {
         display: block;
     }
 
-    .gallery {
-        flex-direction: column;
-        height: auto;
+    .welcome-content {
+        display: block;
+        padding-top: 20px;
+      }
+    
+      .gallery {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        height: auto; /* ya no fijo */
+        gap: 10px;
+        padding: 10px;
+      }
+    
+      .gallery img {
+        flex: 0 0 auto;
+        width: 80vw;
+        max-width: 300px;
+        scroll-snap-align: center;
+        object-fit: cover;
+        border-radius: 10px;
+        opacity: 1;
+      }
+
+    .gallery img:hover {
+        cursor: default;
+        filter: none;
     }
 
-    .gallery img {
-        width: 100% !important;
+    .gallery::-webkit-scrollbar {
+        display: none;
     }
+}   
 
-    .mapa-container iframe {
-        height: 400px !important;
+@media (hover: hover) {
+    .imagen-menu:hover {
+        filter: brightness(100%);
+    }
+    .boton-imagen:hover {
+        background: rgb(255, 168, 84);
+        transform: scale(1.05);
     }
 }
 
-@media (min-width: 1024px) {
-    .mapa-container iframe {
-        width: 600px !important;
-        height: 450px !important;
-        border: 0 !important;
-        /* Aquí conserva exactamente tu estilo original */
+/* ------------------------- VERSIÓN MÓVIL (ADAPTADA) ------------------------- */
+@media (max-width: 1023px) {
+    .container-menu {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+    
+    .imagen-menu {
+        height: 55vh; /* Altura adaptable */
+        min-height: 400px; /* Mínimo para contenido */
+        filter: brightness(80%); /* Más visible en móvil */
+    }
+    
+    .titulo-imagen {
+        font-size: 2.2rem; /* Tamaño legible */
+        margin-top: 20vh; /* Posición relativa */
+        padding: 0 30px; /* Mejor lectura */
+    }
+    
+    .boton-imagen {
+        margin-bottom: 20vh;
+        padding: 12px 40px; /* Botón más táctil */
+    }
+    
+    /* Efecto hover solo en desktop */
+    .imagen-menu:hover {
+        filter: brightness(100%);
     }
 }

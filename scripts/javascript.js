@@ -29,3 +29,22 @@
            navbar.classList.remove('menu-changed');
        }
    });
+   
+   document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.querySelector(".gallery");
+
+    if (window.innerWidth <= 768) {
+        const images = gallery.querySelectorAll("img");
+        let index = 0;
+        const delay = 3000;
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            const scrollLeft = images[index].offsetLeft - (gallery.clientWidth - images[index].clientWidth) / 2;
+            gallery.scrollTo({
+                left: scrollLeft,
+                behavior: 'smooth'
+            });
+        }, delay);
+    }
+});
