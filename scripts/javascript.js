@@ -29,3 +29,34 @@
            navbar.classList.remove('menu-changed');
        }
    });
+
+   document.addEventListener('DOMContentLoaded', function() {
+    // Solo activar en móviles
+    if (window.innerWidth <= 768) {
+        const gallery = document.querySelector('.gallery');
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content">
+        `;
+        document.body.appendChild(lightbox);
+        
+        // Configurar click en imágenes
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                const lightboxImg = lightbox.querySelector('.lightbox-content');
+                lightboxImg.src = this.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+        
+        // Cerrar lightbox
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === this || e.target.classList.contains('lightbox-close')) {
+                this.style.display = 'none';
+            }
+        });
+    }
+});
