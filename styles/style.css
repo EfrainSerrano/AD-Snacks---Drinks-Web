@@ -223,6 +223,7 @@ nav.menu-changed .menu a {
     max-width: 1350px;
     margin: 0 auto;
     text-align: center;
+    overflow: hidden;
 }
 
 .welcome-container {
@@ -595,38 +596,21 @@ footer {
         display: block;
     }
 
-    .welcome-content {
-        display: block;
-        padding-top: 20px;
-      }
-    
-      .gallery {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        height: auto; /* ya no fijo */
-        gap: 10px;
-        padding: 10px;
-      }
-    
-      .gallery img {
-        flex: 0 0 auto;
-        width: 80vw;
-        max-width: 300px;
-        scroll-snap-align: center;
-        object-fit: cover;
-        border-radius: 10px;
-        opacity: 1;
-      }
-
-    .gallery img:hover {
-        cursor: default;
-        filter: none;
+    .gallery {
+        flex-direction: column;
+        height: auto;
     }
 
-    .gallery::-webkit-scrollbar {
-        display: none;
+    .gallery img {
+        width: 100% !important;
+    }
+
+    .mapa-container iframe {
+        height: 400px !important;
+    }
+
+    .container-menu {
+        grid-template-columns: 1fr 1fr; /* 2 columnas */
     }
 }   
 
@@ -647,7 +631,7 @@ footer {
     }
     
     .imagen-menu {
-        height: 55vh; /* Altura adaptable */
+        height: 60vh; /* Altura adaptable */
         min-height: 400px; /* Mínimo para contenido */
         filter: brightness(80%); /* Más visible en móvil */
     }
