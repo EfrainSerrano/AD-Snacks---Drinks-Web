@@ -523,6 +523,131 @@ h2 {
     color: #fff9f9;
 }
 
+/* Menu-snacks */
+
+.snacks {
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-snacks-container {
+    padding: 0px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .title-snacks {
+    text-align: center;
+    font-size: 36px;
+    color: #fff9f9;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .grid-snacks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .card-snacks {
+    background-color: rgb(244, 148, 64);
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card-snacks img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-snacks:hover {
+    transform: scale(1.03);
+  }
+  
+  .card-snacks h2 {
+    margin: 0px 0 5px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: #1E1E1E;
+  }
+
+  .card-snacks span.drinks {
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+    text-align: center; 
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .price-snacks {
+    font-size: 18px;
+    color: #e53935;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .footer-snacks {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 18px;
+    background: rgb(244, 148, 64);
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .waffles {
+    background: rgb(244, 148, 64);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  .waffles img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .waffles-text {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .waffles-text p.center {
+    margin: 0 auto;
+    text-align: center; 
+    font-size: 20px;
+    color: #e53935;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .etiqueta {
+    color: #1E1E1E;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  
+  
 /* ------------ FOOTER ------------ */
 footer {
     background: #333;
@@ -643,6 +768,44 @@ footer {
         opacity: 1;
         transition: transform 0.3s;
     }
+
+    /* footer de waffles */
+
+    .waffles {
+        flex-direction: column;      /* apila imagen y texto verticalmente */
+        align-items: center; 
+        flex-wrap: wrap;        /* centra todo */
+      }
+    
+      .waffles img {
+        width: 100%;                 /* ocupa todo el ancho */
+        border-radius: 10px 10px 0 0;/* bordes redondeados arriba */
+        margin-bottom: 15px;         /* separa del texto */
+      }
+    
+      .waffles-text {
+        width: 100%;                 /* ocupa todo el ancho */
+        justify-content: center;     /* centra las etiquetas */
+        padding: 15px;               /* padding equilibrado */
+        gap: 10px;                   /* separación moderada */
+      }
+    
+      .waffles-text .etiqueta {
+        font-size: 15px;             /* un pelín más pequeña */
+        padding: 7px 10px;           /* reduce un poco */
+      }
+    
+      .waffles-text p.center {
+        width: 100%;                 /* ocupa todo el ancho */
+        margin-top: 10px;            /* separa del bloque de etiquetas */
+        font-size: 18px;             /* tamaño legible en tablet/móvil grande */
+      }
+
+      .etiqueta {
+        white-space: normal;   /* forzar quiebre de línea si es necesario */
+        flex: 1 1 100%;        /* en pantallas pequeñas: cada etiqueta ocupa toda la línea */
+        text-align: center;    /* opcional, para centrar el texto dentro */
+      }
 }   
 
 @media (hover: hover) {
